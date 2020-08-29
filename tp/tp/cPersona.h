@@ -2,9 +2,11 @@
 #include <iostream>
 #include <string>
 using namespace std;
-class cCiudad;
-class sFecha;
-class cVehiculo;
+
+#include "cCiudad.h"
+#include "sFecha.h"
+#include "cVehiculo.h"
+
 class cPersona
 {
 	sFecha* fecha_nacimiento;

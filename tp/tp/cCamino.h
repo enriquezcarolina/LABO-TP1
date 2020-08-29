@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
 #include <string>
-class cCiudad;
+#include "cCiudad.h"
+
 class cCamino
 {
 	cCiudad* ciudad1;
