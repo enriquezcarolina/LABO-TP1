@@ -139,7 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cCamino.cpp" />
+    <ClCompile Include="cCiudad.cpp" />
+    <ClCompile Include="cPersona.cpp" />
+    <ClCompile Include="cVehiculo.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="sCoordenadas.cpp" />
+    <ClCompile Include="sFecha.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cCamino.h" />
+    <ClInclude Include="cCiudad.h" />
+    <ClInclude Include="cPersona.h" />
+    <ClInclude Include="cVehiculo.h" />
+    <ClInclude Include="sCoordenadas.h" />
+    <ClInclude Include="sFecha.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
