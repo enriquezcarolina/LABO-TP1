@@ -5,13 +5,14 @@ using namespace std;
 
 class sCoordenadas
 {
-	float latitud;
-	float longitud;
+	double latitud;
+	double longitud;
 
 public: 
-	sCoordenadas(float la, float lo);
+	sCoordenadas(double la, double lo);
+	sCoordenadas();
 	string tostring();
-	float getLatitud(){ return latitud;}
-	float getLongitud(){ return longitud;}
+	double getLatitud(){ return latitud;}
+	double getLongitud(){ return longitud;}
 };
 

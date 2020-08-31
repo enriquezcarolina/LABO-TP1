@@ -6,13 +6,26 @@ cVehiculo::cVehiculo(cCiudad* ua, const int dism, const int cp, const int consum
 {
 	if (capm < 0)
 		capmaxaire = 30; // si me pasan un parametro invalido la cap maxima de presion en las rudas sera 30
-	capmaxaire = capm;
+	else capmaxaire = capm;
 	cantaire = capm; 
 	ubicacion_actual = ua;
 	precio = prec;
 	nafta_actual = 0;
 	dist_recorrida = 0;
 	patente = p;
+}
+
+cVehiculo::cVehiculo():
+dist_mantenimiento(0), capacidad_tanque(0), consmo(0), marca(" "), anio_lanzamiento("2020"), modelo(" "){
+	capmaxaire=0;
+	cantaire=0;
+	ubicacion_actual= new cCiudad();
+	precio =0;
+	nafta_actual =0;
+	dist_recorrida=0;
+	patente=" ";
+
+
 }
 
 cVehiculo::~cVehiculo()
@@ -63,9 +76,10 @@ bool cVehiculo::recargartanque(int cantnafta){
 }
 
 void cVehiculo::mantenimiento(){
-	cout << "----- Realizando Mantenimiento---- \n infansdo neumaticos y recargando tanque..." << endl;
+	
+	cout << "----- Realizando Mantenimiento---- \n inflando neumaticos y recargando tanque..." << endl;
+	
 	recargartanque(capacidad_tanque-nafta_actual); //llenar el tanque
-	//no se que mas podria ir en el mantenimiento
 	if (cantaire < capmaxaire)
 		cantaire = capmaxaire; // vuelvo a inflar los neumaticos 
 	return;
@@ -79,10 +93,15 @@ void cVehiculo::viajar(cCiudad*destino){
 		return;
 	}
 	
-	else for(int i=0; i<=distancia; i=i+50){ 
-		//no sabia bien como hacer la parte que va viajando y se suma la distancia recorrida
+	else 
+	for(int i=0; i<=distancia; i=i+50){ 
+		
 		dist_recorrida+=50;
 		cantaire -= 2; // a medida que el auto viaja se disminuye la presion en sus neumaticos
+		
+		if(dist_recorrida%100=0)
+			nafta_actual-=consumo;//consumo cada 100km
+	
 		if( dist_recorrida%dist_mantenimiento == 0 ){
 			//mantenimiento cada dist_mantenimiento
 			mantenimiento();
@@ -91,6 +110,13 @@ void cVehiculo::viajar(cCiudad*destino){
 	}
 
 	return;
+}
+
+int cVehiculo::trazarcamino(cCiudad * destino){
+
+	cCamino*camino=new cCamino(ubicacion_actual, destino);
+
+	return camino->getpeajes();
 }
 
 bool cVehiculo::verificarnaftasuficiente(float distancia){

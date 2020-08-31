@@ -4,13 +4,18 @@
 #define R_tierra 6.371 //km
 
 cCiudad::cCiudad(string nom, int pob, float lo, float la)
-{
+: nombre(nom){
     coordenadas = new sCoordenadas(lo, la);
-    nombre = nom;
     poblacion_total = pob;
 }
 
+cCiudad::cCiudad()
+: nombre(" "){
+   
+    coordenadas = new sCoordenadas();
+    poblacion_total=0;
 
+}
 
 cCiudad::~cCiudad()
 {
@@ -25,8 +30,8 @@ return ("Ciudad : "+nombre+"\nPoblacion: "+to_string(poblacion_total)+coordenada
 
 float cCiudad::calculardistancia(cCiudad* destino){
 	
-	 long float lat1, lat2, long1, long2;
-	long float a=0, c=0, dif_long=0, dif_lat=0;
+	double lat1, lat2, long1, long2;
+	double a=0, c=0, dif_long=0, dif_lat=0;
    
     lat1=coordenadas->getLatitud();
     lat2=destino->coordenadas->getLatitud();

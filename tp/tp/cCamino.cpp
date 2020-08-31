@@ -6,3 +6,4 @@ cCamino::cCamino(cCiudad* c1, cCiudad* c2)
 	ciudad2 = c2;
 	peajes = rand() % 6;
 }
+
