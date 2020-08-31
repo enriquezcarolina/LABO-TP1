@@ -11,7 +11,7 @@ class cPersona
 {
 	sFecha* fecha_nacimiento;
 	cVehiculo* vehiculo;
-	const cCiudad* ciudad_origen;
+	cCiudad* ciudad_origen;
 	int plata_actual;
 	const string  nya;
 	const int DNI;

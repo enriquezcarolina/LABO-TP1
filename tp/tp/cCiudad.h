@@ -9,7 +9,7 @@ using namespace std;
 
 class cCiudad
 {
-	const string nombre;
+	string nombre;
 	int poblacion_total;
 	sCoordenadas* coordenadas;
 

@@ -25,7 +25,7 @@ dist_mantenimiento(0), capacidad_tanque(0), consumo(0), marca(" "), anio_lanzami
 	nafta_actual =0;
 	dist_recorrida=0;
 	patente=" ";
-	
+
 }
 
 cVehiculo::~cVehiculo()
@@ -94,14 +94,14 @@ void cVehiculo::viajar(cCiudad*destino){
 	}
 	
 	else cout<<"-- Viajando de "<<ubicacion_actual->getnombre()<<" a "<<destino->getnombre()<<" --"<<endl;
-	for(int i=0; i<=distancia; i++){ 
+	for(int i=0; i<=distancia; i=i+10){ 
 		
 		dist_recorrida++;
-		cantaire --; // a medida que el auto viaja se disminuye la presion en sus neumaticos
 		
-		if(dist_recorrida%100==0)
-			nafta_actual-=consumo;//consumo cada 100km
-	
+		if(dist_recorrida%100==0){
+			nafta_actual-=consumo;//consumo de nafta cada 100km
+			cantaire --; // a medida que el auto viaja se disminuye la presion en sus neumaticos
+		}
 		if( dist_recorrida%dist_mantenimiento == 0 || cantaire==0){
 			//mantenimiento cada dist_mantenimiento o cuando las ruedas se quedan sin aire
 			mantenimiento();
@@ -111,6 +111,7 @@ void cVehiculo::viajar(cCiudad*destino){
 	}
 	cout<<"Llegando a "<<destino->getnombre()<<endl;
     ubicacion_actual=destino;
+	cout<<endl;
 	return;
 }
 
