@@ -19,6 +19,6 @@ public:
 	~cCiudad();
 	string tostring();
 	float calculardistancia(cCiudad* destino);
-
+	string getnombre(){return nombre;}
 };
 

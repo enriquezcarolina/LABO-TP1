@@ -1,7 +1,7 @@
 #include "cCiudad.h"
 #include "sCoordenadas.h"
 
-#define R_tierra 6.371 //km
+#define R_tierra 6371 //km
 
 cCiudad::cCiudad(string nom, int pob, float lo, float la)
 : nombre(nom){
