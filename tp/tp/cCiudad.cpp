@@ -19,7 +19,9 @@ cCiudad::cCiudad()
 
 cCiudad::~cCiudad()
 {
+    coordenadas = NULL;
 	delete coordenadas;
+
 }
 
 string cCiudad::tostring(){

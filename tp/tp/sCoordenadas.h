@@ -11,6 +11,7 @@ class sCoordenadas
 public: 
 	sCoordenadas(float la, float lo);
 	sCoordenadas();
+	~sCoordenadas();
 	string tostring();
 	float getLatitud(){ return latitud;}
 	float getLongitud(){ return longitud;}

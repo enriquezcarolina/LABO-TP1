@@ -23,6 +23,7 @@ class cVehiculo
 public: 
 	cVehiculo(cCiudad* ua, const int dism, const int cp, const int consumo,int prec, const string m, const string a, const string mo, int capm, string p);
 	cVehiculo();
+	cVehiculo(const cVehiculo& otro);
 	bool recargartanque(int cantnafta);
 	void viajar(cCiudad* destino); //sumar dist_recorrida
 	void mantenimiento(); //mantenimiento cada dist_mantenimiento

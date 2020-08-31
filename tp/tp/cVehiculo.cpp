@@ -28,8 +28,14 @@ dist_mantenimiento(0), capacidad_tanque(0), consumo(0), marca(" "), anio_lanzami
 
 }
 
+cVehiculo::cVehiculo(const cVehiculo& otro): cVehiculo(otro.ubicacion_actual, otro.dist_mantenimiento, otro.capacidad_tanque, otro.consumo,
+	otro.precio, otro.marca, otro.anio_lanzamiento, otro.modelo, otro.capmaxaire, otro.patente)
+{
+}
+
 cVehiculo::~cVehiculo()
 {
+	ubicacion_actual = NULL;
 	delete ubicacion_actual;
 }
 

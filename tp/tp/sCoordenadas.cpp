@@ -13,8 +13,12 @@ sCoordenadas::sCoordenadas(){
 
 }
 
+sCoordenadas::~sCoordenadas()
+{
+}
+
 string sCoordenadas::tostring(){
 
-	return  ("-Coordenadas-\n" + 'Latitud:' +to_string(latitud)+"  Longitud:"+to_string(longitud));
+	return  ("-Coordenadas-\n Latitud:" +to_string(latitud)+"  Longitud:"+to_string(longitud));
 
 }

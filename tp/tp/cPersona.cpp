@@ -14,6 +14,8 @@ cPersona::cPersona()
 	fecha_nacimiento = new sFecha (1,1,2020);
 }
 
+
+
 void cPersona::vendervehiculo(cPersona* cliente)
 {
 	if (cliente->getpa() < vehiculo->getprecio())
@@ -79,6 +81,9 @@ void cPersona::viajar(cCiudad* destino)
 
 cPersona::~cPersona()
 {
+	vehiculo = NULL; 
+	fecha_nacimiento = NULL;
+	ciudad_origen = NULL;
 	delete vehiculo;
 	delete fecha_nacimiento;
 	delete ciudad_origen;

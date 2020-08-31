@@ -18,6 +18,7 @@ int main()
 	cVehiculo* v = new cVehiculo(c, 150, 50 ,10, 30000, "fiat", "1998", "uno", 30, "AAB 981");
 	cVehiculo* v1 = new cVehiculo(c3, 300, 60, 15, 1000000, "toyota", "2018", "corolla", 33, "AB 123 CD");
 	cVehiculo* v2 = new cVehiculo(c4, 200, 45, 12, 100000, "renault", "2020", "kangoo", 30, "DAB 781");
+	cVehiculo* v3 = new cVehiculo(*v1);
 	cPersona* p1 = new cPersona(v, c, 900000, 30, "ana tolosa", 2, 5, 1978);
 	cPersona* p2 = new cPersona(v1, c3, 300000, 30, " juana gonzalez", 22, 2, 1988);
 	cPersona* p3 = new cPersona(v2, c1, 1700000, 30, "damian garcia", 5, 9, 1999);
@@ -34,9 +35,12 @@ int main()
 
 	p4->imprmirdatos();
 	v1->imprimirpantalla();
-
+	v3->imprimirpantalla();
+	c = NULL; c1 = NULL; c2 = NULL;c3 = NULL;c4 = NULL; 
+	v1 = NULL;v2 = NULL;v = NULL; v3 = NULL;
+	p1 = NULL;p2 = NULL;p3 = NULL;p4 = NULL;
 	delete c, c1, c2, c3, c4;
-	delete v, v1, v2;
+	delete v, v1, v2, v3;
 	delete p1, p2, p3, p4;
 	
 	system("pause");

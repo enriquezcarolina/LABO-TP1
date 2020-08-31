@@ -19,6 +19,7 @@ class cPersona
 public:
 	cPersona(cVehiculo* vh, cCiudad* co, int pa, int d, string n, int dia, int m, int a);
 	cPersona();
+	
 	void vendervehiculo(cPersona* cliente);
 	void cambiarvehiculo(cVehiculo* compra);
 	cVehiculo* getvehiculo();
