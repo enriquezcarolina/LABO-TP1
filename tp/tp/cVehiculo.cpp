@@ -1,13 +1,18 @@
 #include "cVehiculo.h"
 
 
-cVehiculo::cVehiculo(cCiudad* ua, const int dism, const int cp, const int consumo, int prec, const string m, const string a, const string mo):
+cVehiculo::cVehiculo(cCiudad* ua, const int dism, const int cp, const int consumo, int prec, const string m, const string a, const string mo, int capm, string p):
 	dist_mantenimiento(dism), capacidad_tanque(cp), consumo(consumo), marca(m), anio_lanzamiento(a), modelo(mo)
 {
+	if (capm < 0)
+		capmaxaire = 30; // si me pasan un parametro invalido la cap maxima de presion en las rudas sera 30
+	capmaxaire = capm;
+	cantaire = capm; 
 	ubicacion_actual = ua;
 	precio = prec;
 	nafta_actual = 0;
 	dist_recorrida = 0;
+	patente = p;
 }
 
 cVehiculo::~cVehiculo()
@@ -26,6 +31,26 @@ void cVehiculo::imprimirpantalla(){
 	return;
 }
 
+string cVehiculo::getmodelo()
+{
+	return modelo;
+}
+
+string cVehiculo::getpatente()
+{
+	return patente;
+}
+
+int cVehiculo::getprecio()
+{
+	return precio;
+}
+
+string cVehiculo::getanio()
+{
+	return anio_lanzamiento;
+}
+
 bool cVehiculo::recargartanque(int cantnafta){
 	
 	if(cantnafta<0 || cantnafta>(capacidad_tanque-nafta_actual)) {
@@ -38,10 +63,11 @@ bool cVehiculo::recargartanque(int cantnafta){
 }
 
 void cVehiculo::mantenimiento(){
-
+	cout << "----- Realizando Mantenimiento---- \n infansdo neumaticos y recargando tanque..." << endl;
 	recargartanque(capacidad_tanque-nafta_actual); //llenar el tanque
 	//no se que mas podria ir en el mantenimiento
-
+	if (cantaire < capmaxaire)
+		cantaire = capmaxaire; // vuelvo a inflar los neumaticos 
 	return;
 }
 
@@ -56,7 +82,7 @@ void cVehiculo::viajar(cCiudad*destino){
 	else for(int i=0; i<=distancia; i=i+50){ 
 		//no sabia bien como hacer la parte que va viajando y se suma la distancia recorrida
 		dist_recorrida+=50;
-		
+		cantaire -= 2; // a medida que el auto viaja se disminuye la presion en sus neumaticos
 		if( dist_recorrida%dist_mantenimiento == 0 ){
 			//mantenimiento cada dist_mantenimiento
 			mantenimiento();

@@ -10,3 +10,9 @@ sFecha::sFecha(int d, int m, int a)
 sFecha::~sFecha()
 {
 }
+
+void sFecha::printfecha()
+{
+	cout << dia << "/" << mes << "/" << anio << endl;
+	return;
+}

@@ -15,9 +15,11 @@ class cVehiculo
 	int precio;
 	const string modelo, marca, anio_lanzamiento;
 	int nafta_actual;
-
+	int cantaire; // presion actual de las ruedas, se expresa en libra por pulgada cuadrada
+	int capmaxaire; // capacidad maxima de presion para las ruedas 
+    string  patente;
 public: 
-	cVehiculo(cCiudad* ua, const int dism, const int cp, const int consumo,int prec, const string m, const string a, const string mo);
+	cVehiculo(cCiudad* ua, const int dism, const int cp, const int consumo,int prec, const string m, const string a, const string mo, int capm, string p);
 	
 	bool recargartanque(int cantnafta);
 	void viajar(cCiudad* destino); //sumar dist_recorrida
@@ -26,7 +28,11 @@ public:
 
 	string tostring();
 	void imprimirpantalla();
-
+	string getmodelo();
+	string getpatente();
+	int getprecio();
+	string getanio();
+	
 	~cVehiculo();
 
 };

@@ -13,13 +13,19 @@ class cPersona
 	cVehiculo* vehiculo;
 	cCiudad* ciudad_origen;
 	int plata_actual;
-	string dni, nya;
+	string  nya;
+	int DNI;
 public:
-	cPersona(sFecha* fn, cVehiculo* vh, cCiudad* co, int pa, string d, string n);
-	/*void vendervehiculo(cPersona* cliente);
+	cPersona(cVehiculo* vh, cCiudad* co, int pa, int d, string n, int dia, int m, int a);
+	void vendervehiculo(cPersona* cliente);
+	void cambiarvehiculo(cVehiculo* compra);
+	cVehiculo* getvehiculo();
+	int getpa();
+	void setpa(int p);
+
 	string to_string();
 	void imprmirdatos();
-	void viajar(cCiudad* destino);*/
+	void viajar(cCiudad* destino);
 	~cPersona();
 };
 
