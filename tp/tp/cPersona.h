@@ -15,6 +15,7 @@ class cPersona
 	int plata_actual;
 	const string  nya;
 	const int DNI;
+	
 public:
 	cPersona(cVehiculo* vh, cCiudad* co, int pa, int d, string n, int dia, int m, int a);
 	cPersona();

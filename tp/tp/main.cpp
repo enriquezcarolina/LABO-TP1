@@ -38,6 +38,7 @@ int main()
 	delete c, c1, c2, c3, c4;
 	delete v, v1, v2;
 	delete p1, p2, p3, p4;
+	
 	system("pause");
 	return 0;
 }

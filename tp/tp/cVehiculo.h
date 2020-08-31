@@ -19,6 +19,7 @@ class cVehiculo
 	int cantaire; // presion actual de las ruedas, se expresa en libra por pulgada cuadrada
 	int capmaxaire; // capacidad maxima de presion para las ruedas 
     string  patente;
+	
 public: 
 	cVehiculo(cCiudad* ua, const int dism, const int cp, const int consumo,int prec, const string m, const string a, const string mo, int capm, string p);
 	cVehiculo();

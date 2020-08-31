@@ -9,7 +9,7 @@ cPersona::cPersona(cVehiculo* vh, cCiudad* co, int pa, int d, string n, int dia,
 
 cPersona::cPersona()
 : ciudad_origen(new cCiudad()), DNI(00000000), nya(" "){
-	plata_actual=0;
+	plata_actual = 0;
 	vehiculo = NULL;
 	fecha_nacimiento = new sFecha (1,1,2020);
 }

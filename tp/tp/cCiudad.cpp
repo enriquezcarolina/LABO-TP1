@@ -10,7 +10,7 @@ cCiudad::cCiudad(string nom, int pob, float lo, float la)
 }
 
 cCiudad::cCiudad()
-: nombre(" "){
+: nombre(" ") {
    
     coordenadas = new sCoordenadas();
     poblacion_total=0;
@@ -30,8 +30,8 @@ return ("Ciudad : "+nombre+"\nPoblacion: "+to_string(poblacion_total)+coordenada
 
 float cCiudad::calculardistancia(cCiudad* destino){
 	
-	double lat1, lat2, long1, long2;
-	double a=0, c=0, dif_long=0, dif_lat=0;
+	float lat1, lat2, long1, long2;
+	float a=0, c=0, dif_long=0, dif_lat=0;
    
     lat1=coordenadas->getLatitud();
     lat2=destino->coordenadas->getLatitud();

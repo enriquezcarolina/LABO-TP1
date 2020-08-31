@@ -18,12 +18,12 @@ cVehiculo::cVehiculo(cCiudad* ua, const int dism, const int cp, const int consum
 cVehiculo::cVehiculo():
 dist_mantenimiento(0), capacidad_tanque(0), consumo(0), marca(" "), anio_lanzamiento("2020"), modelo(" "){
 	
-	capmaxaire=0;
-	cantaire=0;
-	ubicacion_actual= new cCiudad();
-	precio =0;
-	nafta_actual =0;
-	dist_recorrida=0;
+	capmaxaire = 0;
+	cantaire = 0;
+	ubicacion_actual = new cCiudad();
+	precio = 0;
+	nafta_actual = 0;
+	dist_recorrida = 0;
 	patente=" ";
 
 }
