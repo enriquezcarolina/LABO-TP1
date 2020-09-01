@@ -102,7 +102,7 @@ void cVehiculo::viajar(cCiudad*destino){
 	else cout<<"-- Viajando de "<<ubicacion_actual->getnombre()<<" a "<<destino->getnombre()<<" --"<<endl;
 	for(int i=0; i<=distancia; i=i+10){ 
 		
-		dist_recorrida++;
+		dist_recorrida+=10;
 		
 		if(dist_recorrida%100==0){
 			nafta_actual-=consumo;//consumo de nafta cada 100km
