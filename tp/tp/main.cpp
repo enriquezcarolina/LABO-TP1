@@ -36,6 +36,7 @@ int main()
 	p4->imprmirdatos();
 	v1->imprimirpantalla();
 	v3->imprimirpantalla();
+	
 	c = NULL; c1 = NULL; c2 = NULL;c3 = NULL;c4 = NULL; 
 	v1 = NULL;v2 = NULL;v = NULL; v3 = NULL;
 	p1 = NULL;p2 = NULL;p3 = NULL;p4 = NULL;

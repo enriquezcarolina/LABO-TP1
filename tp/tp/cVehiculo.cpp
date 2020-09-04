@@ -36,7 +36,6 @@ cVehiculo::cVehiculo(const cVehiculo& otro): cVehiculo(otro.ubicacion_actual, ot
 cVehiculo::~cVehiculo()
 {
 	ubicacion_actual = NULL;
-	delete ubicacion_actual;
 }
 
 string cVehiculo::tostring(){
