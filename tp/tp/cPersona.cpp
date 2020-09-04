@@ -70,6 +70,11 @@ void cPersona::imprmirdatos()
 
 void cPersona::viajar(cCiudad* destino)
 {
+	if(vehiculo==NULL){
+		cout<<"(!) Esta persona no tiene un vehiculo"<<endl;
+		return;
+	}
+
 	int cantpeajes = vehiculo->trazarcamino(destino);
 	if(cantpeajes*50>plata_actual){ //Precio de cada peaje $50
 		cout<<"Plata no alcanza para pagar los peajes en el camino"<<endl;
