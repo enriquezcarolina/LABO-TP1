@@ -3,10 +3,10 @@
 
 #define R_tierra 6371 //km
 
-cCiudad::cCiudad(string nom, int pob, float lo, float la)
-: nombre(nom){
-    coordenadas = new sCoordenadas(lo, la);
-    poblacion_total = pob;
+cCiudad::cCiudad(string nombre, int poblacion_tot, float longitud, float latitud)
+: nombre(nombre){
+    coordenadas = new sCoordenadas(longitud, latitud);
+    poblacion_total = poblacion_tot;
 }
 
 cCiudad::cCiudad()

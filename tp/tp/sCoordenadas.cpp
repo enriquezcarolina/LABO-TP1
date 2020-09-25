@@ -1,9 +1,9 @@
 #include "sCoordenadas.h"
 
-sCoordenadas::sCoordenadas(float la, float lo)
+sCoordenadas::sCoordenadas(float lat, float longitud)
 {
-	latitud = la;
-	longitud = lo;
+	latitud = lat;
+	longitud = longitud;
 }
 
 sCoordenadas::sCoordenadas(){

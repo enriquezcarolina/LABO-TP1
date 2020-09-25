@@ -10,7 +10,7 @@ class cCamino
 	int peajes;
 
 public:
-	cCamino(cCiudad* c1, cCiudad* c2);
+	cCamino(cCiudad* ciudad1, cCiudad* ciudad2);
 	int getpeajes(){ return peajes; }
 
 };

@@ -14,7 +14,7 @@ class cCiudad
 	sCoordenadas* coordenadas;
 
 public: 
-	cCiudad(string nom, int pob, float lo, float la);
+	cCiudad(string nombre, int poblacion_tot, float longitud, float latitud);
 	cCiudad();
 	~cCiudad();
 	string tostring();

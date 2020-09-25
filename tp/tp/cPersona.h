@@ -17,7 +17,7 @@ class cPersona
 	const int DNI;
 	
 public:
-	cPersona(cVehiculo* vh, cCiudad* co, int pa, int d, string n, int dia, int m, int a);
+	cPersona(cVehiculo* vehiculo_personal, cCiudad* ciudad_origen, int plata_actual, int dni, string nombre_apellido, int dia, int mes, int anio);
 	cPersona();
 	
 	void vendervehiculo(cPersona* cliente);

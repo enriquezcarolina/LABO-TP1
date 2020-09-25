@@ -9,7 +9,7 @@ class sCoordenadas
 	float longitud;
 
 public: 
-	sCoordenadas(float la, float lo);
+	sCoordenadas(float lat, float longitud);
 	sCoordenadas();
 	~sCoordenadas();
 	string tostring();

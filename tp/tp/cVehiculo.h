@@ -21,7 +21,7 @@ class cVehiculo
     string  patente;
 	
 public: 
-	cVehiculo(cCiudad* ua, const int dism, const int cp, const int consumo,int prec, const string m, const string a, const string mo, int capm, string p);
+	cVehiculo(cCiudad* ubicacionactual, const int dist_mantenimiento, const int capacidad_tanque, const int consumo,int prec, const string marca, const string anio, const string modelo, int capacidadmax, string patente);
 	cVehiculo();
 	cVehiculo(const cVehiculo& otro);
 	bool recargartanque(int cantnafta);

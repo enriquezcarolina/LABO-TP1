@@ -1,10 +1,10 @@
 #include "cPersona.h"
 
-cPersona::cPersona(cVehiculo* vh, cCiudad* co, int pa, int d, string n, int dia, int m, int a)
-: ciudad_origen(co), DNI(d), nya(n) {
-	plata_actual=pa;
-	vehiculo = vh;
-	fecha_nacimiento = new sFecha(d,m,a);
+cPersona::cPersona(cVehiculo* vehiculo_personal, cCiudad* ciudad_origen, int plata_actual, int dni, string nombre_apellido, int dia, int mes, int anio)
+: ciudad_origen(ciudad_origen), DNI(dni), nya(nombre_apellido) {
+	this-> plata_actual=plata_actual;
+	vehiculo = vehiculo_personal;
+	fecha_nacimiento = new sFecha(dia,mes,anio);
 }
 
 cPersona::cPersona()

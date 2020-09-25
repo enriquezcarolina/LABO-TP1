@@ -1,9 +1,9 @@
 #include "cCamino.h"
 
-cCamino::cCamino(cCiudad* c1, cCiudad* c2)
+cCamino::cCamino(cCiudad* ciudad1, cCiudad* ciudad2)
 {
-	ciudad1 = c1;
-	ciudad2 = c2;
+	this->ciudad1 = ciudad1;
+	this->ciudad2 = ciudad2;
 	peajes = rand() % 6;
 }
 

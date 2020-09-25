@@ -1,18 +1,18 @@
 #include "cVehiculo.h"
 
 
-cVehiculo::cVehiculo(cCiudad* ua, const int dism, const int cp, const int consumo, int prec, const string m, const string a, const string mo, int capm, string p):
-	dist_mantenimiento(dism), capacidad_tanque(cp), consumo(consumo), marca(m), anio_lanzamiento(a), modelo(mo)
+cVehiculo::cVehiculo(cCiudad* ubicacionactual, const int dist_mantenimiento, const int capacidad_tanque, const int consumo, int prec, const string marca, const string anio, const string modelo, int capacidadmax, string patente):
+	dist_mantenimiento(dist_mantenimiento), capacidad_tanque(capacidad_tanque), consumo(consumo), marca(marca), anio_lanzamiento(anio), modelo(modelo)
 {
-	if (capm < 0)
+	if (capacidadmax < 0)
 		capmaxaire = 30; // si me pasan un parametro invalido la cap maxima de presion en las rudas sera 30
-	else capmaxaire = capm;
-	cantaire = capm; 
-	ubicacion_actual = ua;
+	else capmaxaire = capacidadmax;
+	cantaire = capacidadmax; 
+	this->ubicacion_actual = ubicacionactual;
 	precio = prec;
 	nafta_actual = capacidad_tanque;
 	dist_recorrida = 0;
-	patente = p;
+	this->patente = patente;
 }
 
 cVehiculo::cVehiculo():
